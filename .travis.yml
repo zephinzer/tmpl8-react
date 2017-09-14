@@ -6,7 +6,10 @@ node_js:
   - "6"
 
 stages:
-  - test
+  - system_and_integration
+  - functional
+  - code_quality
+  - security
 
 install:
   - npm install -g bower
@@ -14,15 +17,16 @@ install:
   - bower install
 
 jobs:
-  system_and_integration:
-    script:
-      - npm run mocha
-  functional_tests:
-    script:
-      - npm run karma
-  code_quality_checks:
-    script:
-      - npm run eslint
-  security_checks:
-    script:
-      - npm run nsp
+  include:
+    - stage: system_and_integration
+      script:
+        - npm run mocha
+    - stage: functional
+      script:
+        - npm run karma
+    - stage: code_quality
+      script:
+        - npm run eslint
+    - stage: security_checks
+      script:
+        - npm run nsp

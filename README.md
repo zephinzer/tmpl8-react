@@ -1,6 +1,8 @@
 # tmpl8-react
 A project seeder for React that is used as a submodule for the main tmpl8 project. Feel free to use it for your own projects!
 
+[![Build Status](https://travis-ci.org/zephinzer/tmpl8-react.svg?branch=master)](https://travis-ci.org/zephinzer/tmpl8-react)
+
 ## Get Started
 
 ### Install Dependencies

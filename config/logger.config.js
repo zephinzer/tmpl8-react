@@ -34,7 +34,7 @@ let LOG_PATH = LOG_PATH_EXISTS ? process.env.LOG_PATH : path.join(process.cwd(),
 
 let logger = null;
 module.exports = function() {
-  if (logger === null) {
+  if(logger === null) {
     logger = initializeWinston();
   }
   mapConsoleToLogger(logger, [

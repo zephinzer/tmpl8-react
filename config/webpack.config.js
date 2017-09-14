@@ -4,14 +4,11 @@ const {
   CONF_BUILD,
   CONF_DEV,
   CONF_PRD,
-  DEFAULT_SERVER_PORT,
 } = require('./constant');
 const CONST_WEBPACK = 'webpack';
 const NA_STRING = 'not in use';
 const NA_ARRAY = [NA_STRING];
 const NA_OBJECT = {message: NA_STRING};
-
-const serverPort = process.env.PORT || DEFAULT_SERVER_PORT;
 
 module.exports = (function() {
   const env = getEnv(process.env);

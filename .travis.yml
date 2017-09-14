@@ -19,3 +19,9 @@ jobs:
   functional_tests:
     script:
       - npm run karma
+  code_quality_checks:
+    script:
+      - npm run eslint
+  security_checks:
+    script:
+      - npm run nsp

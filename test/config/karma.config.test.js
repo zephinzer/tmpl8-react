@@ -3,7 +3,7 @@ const karma = require('../../config/karma.config');
 
 describe('config/karma', () => {
   let configuration = null;
-  
+
   before(() => {
     karma({set: function(_configuration) {
       configuration = _configuration;

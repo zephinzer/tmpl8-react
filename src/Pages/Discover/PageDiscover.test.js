@@ -12,7 +12,7 @@ describe('PageDiscover', () => {
   it('renders', () => {
     expect(component).to.be.okay;
   });
-  
+
     it('calls props.linkTo when clicked', () => {
       const linkTo = sinon.spy();
       component.setProps({linkTo});

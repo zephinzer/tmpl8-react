@@ -59,7 +59,7 @@ describe('Router', () => {
         }).to.not.throw();
       });
     });
-    
+
     context('discover page', () => {
       let page = null;
 

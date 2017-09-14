@@ -1,0 +1,32 @@
+# tmpl8-react : docker deployment [prd]
+# -------------------------------------
+# This file deploys the application in production mode using a container architecture.
+#
+# reference: https://docs.docker.com/compose/compose-file/
+version: "3"
+services:
+  tmpl8_react_prd:
+    build: .
+    dns:
+      - "8.8.8.8"
+    deploy:
+      labels:
+        com.tmpl8_react.description: "Template React application"
+      mode: replicated
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 10
+    volumes:
+      - ./:/app
+    working_dir: /app
+    entrypoint: ./scripts/docker-entrypoint.prd.sh
+    environment:
+      - LOG_PATH=/var/log/tmpl8_react_prd
+      - NODE_ENV=prd
+      - PORT=3334
+    ports:
+      - "3334:3334"
+    expose: 
+      - "3334"

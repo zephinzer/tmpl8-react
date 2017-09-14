@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      tmpl8
+    </title>
+  </head>
+  <body>
+    <div id="<%=entrypointId%>" />
+    <% for(var i = 0; i < scriptIncludes[env].length; ++i) { %>
+      <script src="<%=scriptIncludes[env][i]%>"></script>
+    <% } %>
+  </body>
+</html>

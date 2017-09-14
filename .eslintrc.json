@@ -1,0 +1,49 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "spread": true,
+      "jsx": true
+    },
+    "allowImportExportEverywhere": true,
+    "sourceType": "module"
+  },
+  "extends": [
+    "google"
+  ],
+  "plugins": [
+    "import",
+    "no-unsafe-innerhtml",
+    "scanjs-rules",
+    "react"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-root-import": {},
+      "node": {
+        "paths": ["."]
+      }
+    }
+  },
+  "rules": {
+    "jsx-quotes": ["error"],
+    "keyword-spacing": [
+      "error",
+      {
+        "overrides": {
+          "if": {
+            "after": false,
+            "before": false
+          }
+        }
+      }
+    ],
+    "max-len": ["error", 127],
+    "import/first": ["off"],
+    "import/no-unresolved": ["error"],
+    "import/order": ["error", {"groups": ["builtin", "external", "parent", "sibling", "index"]}],
+    "react/jsx-uses-react": ["error"],
+    "react/jsx-uses-vars": ["error"],
+    "require-jsdoc": ["off"]
+  }
+}

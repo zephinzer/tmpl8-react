@@ -1,0 +1,7 @@
+node_modules
+assets/build/*
+!assets/build/empty
+assets/coverage/*
+!assets/coverage/empty
+assets/lib/*
+!assets/lib/empty

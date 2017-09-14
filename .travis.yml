@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - "8"
+  - "7"
+  - "6"
+
+stages:
+  - test
+
+install:
+  - yarn install
+  - bower install
+
+jobs:
+  system_and_integration:
+    script:
+      - npm run mocha
+  functional_tests:
+    script:
+      - npm run karma

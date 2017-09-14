@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -rf assets/build/*;
+printf 'YOUR BUILT FILES WILL APPEAR HERE! (run "npm run build" in project root)' > assets/build/empty;
+rm -rf assets/coverage/*;
+printf 'YOUR TEST COVERAGE WILL APPEAR HERE! (run "npm run karma" in project root)' >  assets/coverage/empty;
+rm -rf assets/lib/*;
+printf 'YOUR BOWER COMPONENTS WILL APPEAR HERE! (run "bower install" in project root)' >  assets/lib/empty;
+rm -rf logs/*;
+printf 'YOUR LOGS WILL APPEAR HERE! (run "npm start" in project root)' >   logs/empty;
+rm -rf node_modules;

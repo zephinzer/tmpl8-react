@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "ignore": [
+    "assets/*",
+    "assets/**/*",
+    "logs/*",
+    "scripts/*",
+    "src/*",
+    "src/**/*",
+    "test/*",
+    "test/**/*"
+  ]
+}

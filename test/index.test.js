@@ -6,7 +6,8 @@ const server = require('../index.js');
 const reactEntrypoint = require('../config/react-entrypoint.config');
 
 describe('tmpl8-react', () => {
-  it('responds to /* with the main webpage', (done) => {
+  it('responds to /* with the main webpage', function(done) {
+    this.timeout(10000); //eslint-disable-line
     request(server)
       .get('/')
       .expect('Content-Type', /^text\/html;/)
@@ -17,7 +18,8 @@ describe('tmpl8-react', () => {
       });
   });
 
-  it('respond to /assets/* with static assets', (done) => {
+  it('respond to /assets/* with static assets', function(done) {
+    this.timeout(10000); //eslint-disable-line
     const expectedResponse = fs.readFileSync(path.join(process.cwd(), '/assets/build/empty')).toString();
     request(server)
       .get('/assets/build/empty')

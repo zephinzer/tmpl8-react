@@ -1,4 +1,4 @@
-const {APP_NAME} = require('./constant');
+const {APP_NAME} = require('./config/constant');
 
 module.exports = {
   apps: [

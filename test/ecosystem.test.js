@@ -1,5 +1,5 @@
-const CONSTANTS = require('../../config/constant');
-const ecosystem = require('../../config/ecosystem.config');
+const CONSTANTS = require('../config/constant');
+const ecosystem = require('../ecosystem');
 
 describe('config/ecosystem', () => {
   it('contains PM2 configurations', () => {});
